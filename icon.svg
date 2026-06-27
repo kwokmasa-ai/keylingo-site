@@ -1,0 +1,28 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
+  <!-- Key shape -->
+  <g transform="translate(512,420)">
+    <!-- Globe/circle representing languages -->
+    <circle cx="0" cy="-60" r="160" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="8"/>
+    <ellipse cx="0" cy="-60" rx="160" ry="60" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="5"/>
+    <line x1="0" y1="-220" x2="0" y2="100" stroke="rgba(255,255,255,0.2)" stroke-width="5"/>
+    <line x1="-160" y1="-60" x2="160" y2="-60" stroke="rgba(255,255,255,0.2)" stroke-width="5"/>
+    <!-- K letter -->
+    <text x="-20" y="10" font-family="SF Pro, -apple-system, Helvetica, Arial, sans-serif" font-size="260" font-weight="800" fill="white" text-anchor="middle">K</text>
+  </g>
+  <!-- Small language labels around -->
+  <text x="200" y="250" font-family="SF Pro, sans-serif" font-size="48" fill="rgba(255,255,255,0.5)" font-weight="600">EN</text>
+  <text x="750" y="220" font-family="SF Pro, sans-serif" font-size="48" fill="rgba(255,255,255,0.5)" font-weight="600">&#54620;</text>
+  <text x="160" y="750" font-family="SF Pro, sans-serif" font-size="48" fill="rgba(255,255,255,0.5)" font-weight="600">ES</text>
+  <text x="780" y="780" font-family="SF Pro, sans-serif" font-size="48" fill="rgba(255,255,255,0.5)" font-weight="600">&#26085;</text>
+  <text x="820" y="500" font-family="SF Pro, sans-serif" font-size="42" fill="rgba(255,255,255,0.35)" font-weight="600">FR</text>
+  <text x="130" y="500" font-family="SF Pro, sans-serif" font-size="42" fill="rgba(255,255,255,0.35)" font-weight="600">&#1593;</text>
+  <!-- Subtitle -->
+  <text x="512" y="880" font-family="SF Pro, sans-serif" font-size="72" fill="rgba(255,255,255,0.9)" font-weight="700" text-anchor="middle" letter-spacing="12">KEYLINGO</text>
+</svg>
