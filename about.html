@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — KeyLingo</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; }
+.back { display: inline-block; padding: 24px; color: #6366f1; text-decoration: none; font-size: 14px; }
+
+.about-hero {
+    text-align: center;
+    padding: 60px 24px 40px;
+}
+.about-hero h1 { font-size: 42px; font-weight: 800; margin-bottom: 16px; }
+.about-hero p { font-size: 18px; color: #666; max-width: 600px; margin: 0 auto; line-height: 1.7; }
+
+.mission {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+}
+
+.mission h2 { font-size: 28px; margin-bottom: 16px; margin-top: 40px; }
+.mission p { color: #555; line-height: 1.8; margin-bottom: 16px; font-size: 16px; }
+
+.stats {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    padding: 60px 24px;
+    text-align: center;
+    color: white;
+}
+.stats h2 { font-size: 28px; margin-bottom: 32px; }
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.stat { text-align: center; }
+.stat .num { font-size: 48px; font-weight: 800; }
+.stat .label { font-size: 14px; opacity: 0.8; margin-top: 4px; }
+
+.values {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+.values h2 { text-align: center; font-size: 28px; margin-bottom: 32px; }
+.value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+.value-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    padding: 24px;
+}
+.value-card .icon { font-size: 32px; margin-bottom: 12px; }
+.value-card h3 { font-size: 18px; margin-bottom: 8px; }
+.value-card p { color: #666; font-size: 14px; line-height: 1.6; }
+
+.cta-section {
+    text-align: center;
+    padding: 60px 24px;
+    background: #f8f8fa;
+}
+.cta-section h2 { font-size: 28px; margin-bottom: 12px; }
+.cta-section p { color: #666; margin-bottom: 24px; }
+.cta-btn {
+    display: inline-block;
+    padding: 14px 36px;
+    background: #6366f1;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+footer { text-align: center; padding: 40px 24px; color: #999; font-size: 14px; }
+footer a { color: #6366f1; text-decoration: none; margin: 0 12px; }
+
+@media (max-width: 600px) {
+    .about-hero h1 { font-size: 32px; }
+    .stats-grid { gap: 24px; }
+    .stat .num { font-size: 36px; }
+}
+</style>
+</head>
+<body>
+
+<a href="index.html" class="back">&larr; Back to KeyLingo</a>
+
+<div class="about-hero">
+    <h1>Language should never be a barrier</h1>
+    <p>KeyLingo was built for the 1.5 billion people who speak more than one language — and the billions more who want to connect across languages.</p>
+</div>
+
+<div class="mission">
+    <h2>Our story</h2>
+    <p>Growing up between cultures means growing up between languages. You text your mom in one language, your friends in another, your coworkers in a third. But your keyboard only speaks one at a time.</p>
+    <p>We built KeyLingo because we were tired of the copy-paste dance — type a message, switch to Google Translate, paste, copy the translation, switch back, paste again. Every single time.</p>
+    <p>KeyLingo puts every language right where you need it: in your keyboard. Type in English, send in Korean. Switch to Spanish mid-sentence. Translate a message you received without leaving the chat. One keyboard, every language, zero friction.</p>
+
+    <h2>Who it's for</h2>
+    <p>KeyLingo is for anyone who lives between languages. The Korean-American who wants to text their grandmother in Korean. The expat in Paris who needs to email in French. The K-pop fan who wants to tweet in Hangul. The immigrant who doesn't want to lose their mother tongue.</p>
+    <p>If you've ever wished your keyboard understood you the way you think — in more than one language — KeyLingo is for you.</p>
+
+    <h2>Our commitment</h2>
+    <p>Your privacy comes first. We don't store what you type, we don't sell your data, and we never will. KeyLingo processes translations in real-time and forgets everything the moment your message is sent. Your conversations are yours alone.</p>
+</div>
+
+<div class="stats">
+    <h2>KeyLingo by the numbers</h2>
+    <div class="stats-grid">
+        <div class="stat"><div class="num">100+</div><div class="label">Languages supported</div></div>
+        <div class="stat"><div class="num">50+</div><div class="label">Script systems</div></div>
+        <div class="stat"><div class="num">0</div><div class="label">Keystrokes stored</div></div>
+    </div>
+</div>
+
+<div class="values">
+    <h2>What we believe</h2>
+    <div class="value-grid">
+        <div class="value-card">
+            <div class="icon">&#127760;</div>
+            <h3>Connection over borders</h3>
+            <p>Language should bring people together, not keep them apart. Every feature we build starts with this principle.</p>
+        </div>
+        <div class="value-card">
+            <div class="icon">&#128274;</div>
+            <h3>Privacy by design</h3>
+            <p>We engineered KeyLingo so that your data never leaves your device unless absolutely necessary for translation.</p>
+        </div>
+        <div class="value-card">
+            <div class="icon">&#9889;</div>
+            <h3>Speed matters</h3>
+            <p>Conversations move fast. KeyLingo translates in milliseconds so you never miss a beat in your chat.</p>
+        </div>
+        <div class="value-card">
+            <div class="icon">&#10084;&#65039;</div>
+            <h3>Every language has value</h3>
+            <p>We're committed to supporting underserved languages — not just the top 10. Every language deserves a great keyboard.</p>
+        </div>
+    </div>
+</div>
+
+<div class="cta-section">
+    <h2>Ready to type in every language?</h2>
+    <p>Download KeyLingo and start communicating without limits.</p>
+    <a href="#" class="cta-btn">Download on the App Store</a>
+</div>
+
+<footer>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="support.html">Support & FAQ</a>
+    <a href="mailto:Keylingo@proton.me">Contact</a>
+    <p style="margin-top:12px;">&copy; 2026 KeyLingo. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

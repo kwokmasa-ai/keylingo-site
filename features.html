@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Features — KeyLingo</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; }
+.back { display: inline-block; padding: 24px; color: #6366f1; text-decoration: none; font-size: 14px; }
+.hero-feat { text-align: center; padding: 60px 24px; }
+.hero-feat h1 { font-size: 42px; font-weight: 800; margin-bottom: 12px; }
+.hero-feat p { font-size: 18px; color: #666; max-width: 500px; margin: 0 auto; }
+
+.feature-section { padding: 60px 24px; max-width: 900px; margin: 0 auto; }
+.feature-section:nth-child(even) { background: #f8f8fa; max-width: 100%; }
+.feature-section:nth-child(even) .feature-inner { max-width: 900px; margin: 0 auto; }
+
+.feature-row { display: flex; align-items: center; gap: 48px; }
+.feature-row.reverse { flex-direction: row-reverse; }
+.feature-text { flex: 1; }
+.feature-visual { flex: 1; display: flex; justify-content: center; }
+.feature-text h2 { font-size: 28px; margin-bottom: 12px; }
+.feature-text p { color: #555; line-height: 1.7; margin-bottom: 16px; }
+.feature-text ul { list-style: none; padding: 0; }
+.feature-text li { padding: 6px 0; color: #555; }
+.feature-text li::before { content: "✓ "; color: #6366f1; font-weight: 700; }
+
+.phone-frame {
+    width: 220px;
+    height: 440px;
+    background: #1a1a2e;
+    border-radius: 32px;
+    border: 3px solid #333;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.phone-notch { width: 80px; height: 6px; background: #333; border-radius: 3px; margin: 0 auto 12px; }
+.phone-screen { flex: 1; background: #f5f5f5; border-radius: 16px; display: flex; flex-direction: column; overflow: hidden; }
+.chat-area { flex: 1; padding: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; }
+.msg { max-width: 75%; padding: 8px 12px; border-radius: 14px; font-size: 11px; line-height: 1.4; }
+.msg.sent { background: #6366f1; color: white; align-self: flex-end; border-bottom-right-radius: 4px; }
+.msg.received { background: #e5e5ea; color: #1a1a1a; align-self: flex-start; border-bottom-left-radius: 4px; }
+.msg .lang-tag { font-size: 9px; opacity: 0.7; display: block; margin-top: 2px; }
+.keyboard-bar { background: #d1d1d6; padding: 6px 8px; display: flex; gap: 4px; align-items: center; }
+.kb-btn { background: white; border-radius: 4px; padding: 3px 6px; font-size: 9px; font-weight: 600; }
+.kb-lang { background: #6366f1; color: white; border-radius: 4px; padding: 3px 8px; font-size: 9px; font-weight: 600; }
+.keyboard-keys { background: #d1d1d6; padding: 4px; display: grid; grid-template-columns: repeat(10, 1fr); gap: 2px; }
+.key { background: white; border-radius: 3px; text-align: center; font-size: 9px; padding: 5px 0; font-weight: 500; }
+
+.lang-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 24px; }
+.lang-card { background: white; border: 1px solid #e5e5e5; border-radius: 12px; padding: 16px; text-align: center; }
+.lang-card .flag { font-size: 28px; }
+.lang-card .name { font-size: 14px; font-weight: 600; margin-top: 4px; }
+.lang-card .native { font-size: 12px; color: #888; }
+
+.pricing { padding: 60px 24px; text-align: center; }
+.pricing h2 { font-size: 32px; margin-bottom: 32px; }
+.price-cards { display: flex; gap: 20px; justify-content: center; max-width: 700px; margin: 0 auto; flex-wrap: wrap; }
+.price-card { flex: 1; min-width: 250px; background: white; border: 2px solid #e5e5e5; border-radius: 16px; padding: 32px 24px; }
+.price-card.featured { border-color: #6366f1; }
+.price-card .plan { font-size: 14px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.price-card .price { font-size: 36px; font-weight: 800; }
+.price-card .period { font-size: 14px; color: #888; margin-bottom: 20px; }
+.price-card ul { list-style: none; padding: 0; text-align: left; margin-bottom: 24px; }
+.price-card li { padding: 6px 0; font-size: 14px; color: #555; }
+.price-card li::before { content: "✓ "; color: #22c55e; font-weight: 700; }
+.price-card .save { display: inline-block; background: #dcfce7; color: #16a34a; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; margin-bottom: 12px; }
+
+footer { text-align: center; padding: 40px 24px; color: #999; font-size: 14px; }
+footer a { color: #6366f1; text-decoration: none; margin: 0 12px; }
+
+@media (max-width: 700px) {
+    .feature-row, .feature-row.reverse { flex-direction: column; }
+    .hero-feat h1 { font-size: 32px; }
+}
+</style>
+</head>
+<body>
+
+<a href="index.html" class="back">&larr; Back to KeyLingo</a>
+
+<div class="hero-feat">
+    <h1>Everything you need in a keyboard</h1>
+    <p>Type, translate, and communicate across languages — all without leaving your conversation.</p>
+</div>
+
+<div class="feature-section">
+    <div class="feature-row">
+        <div class="feature-text">
+            <h2>Translate as you type</h2>
+            <p>No more copying text into a separate translator app. Type your message naturally and KeyLingo translates it instantly before you send.</p>
+            <ul>
+                <li>Real-time translation in 100+ languages</li>
+                <li>See original and translated text side by side</li>
+                <li>One-tap to switch translation direction</li>
+                <li>Context-aware for natural-sounding results</li>
+            </ul>
+        </div>
+        <div class="feature-visual">
+            <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                    <div class="chat-area">
+                        <div class="msg received">Hola! Como estas?<span class="lang-tag">Spanish</span></div>
+                        <div class="msg sent">Estoy bien, gracias! Y tu?<span class="lang-tag">Typed in English &rarr; Spanish</span></div>
+                        <div class="msg received">Muy bien! Quieres ir al cine?<span class="lang-tag">Spanish</span></div>
+                        <div class="msg sent">Si, me encantaria!<span class="lang-tag">Typed in English &rarr; Spanish</span></div>
+                    </div>
+                    <div class="keyboard-bar">
+                        <span class="kb-lang">EN &rarr; ES</span>
+                        <span class="kb-btn">Aa</span>
+                    </div>
+                    <div class="keyboard-keys">
+                        <div class="key">Q</div><div class="key">W</div><div class="key">E</div><div class="key">R</div><div class="key">T</div>
+                        <div class="key">Y</div><div class="key">U</div><div class="key">I</div><div class="key">O</div><div class="key">P</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="feature-section">
+    <div class="feature-inner">
+        <div class="feature-row reverse">
+            <div class="feature-text">
+                <h2>Instant language switching</h2>
+                <p>Jump between languages with a single tap. No need to go to settings or switch keyboards. Your most-used languages are always one tap away.</p>
+                <ul>
+                    <li>Switch languages mid-conversation</li>
+                    <li>Pin your favorite languages for quick access</li>
+                    <li>Smart language detection and suggestions</li>
+                    <li>Supports right-to-left languages (Arabic, Hebrew)</li>
+                </ul>
+            </div>
+            <div class="feature-visual">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="chat-area">
+                            <div class="msg sent" style="background:#22c55e">Hello! How are you?<span class="lang-tag">English</span></div>
+                            <div class="msg sent" style="background:#6366f1">&#50504;&#45397;&#54616;&#49464;&#50836;!<span class="lang-tag">Korean</span></div>
+                            <div class="msg sent" style="background:#f97316">&#12371;&#12435;&#12395;&#12385;&#12399;!<span class="lang-tag">Japanese</span></div>
+                            <div class="msg sent" style="background:#ec4899">&iexcl;Hola!<span class="lang-tag">Spanish</span></div>
+                            <div class="msg sent" style="background:#8b5cf6">Bonjour!<span class="lang-tag">French</span></div>
+                        </div>
+                        <div class="keyboard-bar">
+                            <span class="kb-lang">EN</span>
+                            <span class="kb-lang" style="background:#22c55e">KO</span>
+                            <span class="kb-lang" style="background:#f97316">JA</span>
+                            <span class="kb-lang" style="background:#ec4899">ES</span>
+                            <span class="kb-btn">+5</span>
+                        </div>
+                        <div class="keyboard-keys">
+                            <div class="key">Q</div><div class="key">W</div><div class="key">E</div><div class="key">R</div><div class="key">T</div>
+                            <div class="key">Y</div><div class="key">U</div><div class="key">I</div><div class="key">O</div><div class="key">P</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="feature-section">
+    <div class="feature-row">
+        <div class="feature-text">
+            <h2>Works everywhere you type</h2>
+            <p>KeyLingo works in every app on your iPhone. Text messages, social media, email — anywhere you can type, KeyLingo is there.</p>
+            <ul>
+                <li>iMessage and SMS</li>
+                <li>WhatsApp, Telegram, Signal</li>
+                <li>Instagram, TikTok, Twitter/X</li>
+                <li>Gmail, Outlook, and all email apps</li>
+                <li>Notes, Safari, and every other app</li>
+            </ul>
+        </div>
+        <div class="feature-visual">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; text-align: center;">
+                <div style="background:#25D366; color:white; border-radius:16px; padding:20px 12px; font-weight:700; font-size:13px;">WhatsApp</div>
+                <div style="background:#007AFF; color:white; border-radius:16px; padding:20px 12px; font-weight:700; font-size:13px;">iMessage</div>
+                <div style="background:#E1306C; color:white; border-radius:16px; padding:20px 12px; font-weight:700; font-size:13px;">Instagram</div>
+                <div style="background:#0088CC; color:white; border-radius:16px; padding:20px 12px; font-weight:700; font-size:13px;">Telegram</div>
+                <div style="background:#EA4335; color:white; border-radius:16px; padding:20px 12px; font-weight:700; font-size:13px;">Gmail</div>
+                <div style="background:#000000; color:white; border-radius:16px; padding:20px 12px; font-weight:700; font-size:13px;">TikTok</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="feature-section" style="padding: 60px 24px;">
+    <h2 style="text-align:center; font-size:32px; margin-bottom:12px;">Supported languages</h2>
+    <p style="text-align:center; color:#666; margin-bottom:32px;">And 90+ more. New languages added regularly.</p>
+    <div class="lang-grid" style="max-width:900px; margin:0 auto;">
+        <div class="lang-card"><div class="flag">&#127482;&#127480;</div><div class="name">English</div><div class="native">English</div></div>
+        <div class="lang-card"><div class="flag">&#127472;&#127479;</div><div class="name">Korean</div><div class="native">&#54620;&#44397;&#50612;</div></div>
+        <div class="lang-card"><div class="flag">&#127471;&#127477;</div><div class="name">Japanese</div><div class="native">&#26085;&#26412;&#35486;</div></div>
+        <div class="lang-card"><div class="flag">&#127466;&#127480;</div><div class="name">Spanish</div><div class="native">Espa&ntilde;ol</div></div>
+        <div class="lang-card"><div class="flag">&#127467;&#127479;</div><div class="name">French</div><div class="native">Fran&ccedil;ais</div></div>
+        <div class="lang-card"><div class="flag">&#127465;&#127466;</div><div class="name">German</div><div class="native">Deutsch</div></div>
+        <div class="lang-card"><div class="flag">&#127464;&#127475;</div><div class="name">Chinese</div><div class="native">&#20013;&#25991;</div></div>
+        <div class="lang-card"><div class="flag">&#127463;&#127479;</div><div class="name">Portuguese</div><div class="native">Portugu&ecirc;s</div></div>
+        <div class="lang-card"><div class="flag">&#127470;&#127475;</div><div class="name">Hindi</div><div class="native">&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;</div></div>
+        <div class="lang-card"><div class="flag">&#127462;&#127466;</div><div class="name">Arabic</div><div class="native">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</div></div>
+        <div class="lang-card"><div class="flag">&#127479;&#127482;</div><div class="name">Russian</div><div class="native">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</div></div>
+        <div class="lang-card"><div class="flag">&#127470;&#127481;</div><div class="name">Italian</div><div class="native">Italiano</div></div>
+    </div>
+</div>
+
+<div class="pricing">
+    <h2>Simple pricing</h2>
+    <div class="price-cards">
+        <div class="price-card">
+            <div class="plan">Free</div>
+            <div class="price">$0</div>
+            <div class="period">forever</div>
+            <ul>
+                <li>5 languages</li>
+                <li>10 translations per day</li>
+                <li>Basic word suggestions</li>
+            </ul>
+        </div>
+        <div class="price-card featured">
+            <div class="save">Save 50%</div>
+            <div class="plan">Yearly</div>
+            <div class="price">$29.99</div>
+            <div class="period">per year ($2.50/mo)</div>
+            <ul>
+                <li>100+ languages unlocked</li>
+                <li>Unlimited translations</li>
+                <li>Priority translation speed</li>
+                <li>No ads</li>
+                <li>7-day free trial</li>
+            </ul>
+        </div>
+        <div class="price-card">
+            <div class="plan">Monthly</div>
+            <div class="price">$4.99</div>
+            <div class="period">per month</div>
+            <ul>
+                <li>100+ languages unlocked</li>
+                <li>Unlimited translations</li>
+                <li>Priority translation speed</li>
+                <li>No ads</li>
+                <li>7-day free trial</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="support.html">Support & FAQ</a>
+    <a href="mailto:Keylingo@proton.me">Contact</a>
+    <p style="margin-top:12px;">&copy; 2026 KeyLingo. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
